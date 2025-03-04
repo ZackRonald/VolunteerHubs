@@ -1,0 +1,109 @@
+
+.sideBarVol{
+    position: relative;
+    height: 400px;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 200px;
+    position: absolute;
+top: 20px;
+left: 1300px;
+    z-index: 1001;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.sideBarVol > #list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    left: 20px;
+    position: relative;
+    color: black;
+}
+
+ .menu-toggle-Vol{
+   display: block;
+} 
+
+.AddVol{
+    position: absolute;
+    height: 270px;
+    width: 1200px;
+    top: 23px; 
+    background: linear-gradient(135deg, #1e3c72, #2a5298);  
+    z-index: 1004;
+    border-radius: 20px;
+    left: 300px;
+}
+
+#VolDet{
+    height: 50px;
+    width: 300px;
+    background: none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    outline: none;
+}
+
+#AddVolBtn{
+    position: relative;
+    left: 50px;
+}
+
+#CloseVol{
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    left: 1100px;
+}
+
+#VolForm{
+    position: relative;
+    left: 80px;
+    bottom: 20px;
+}
+
+
+.TableVol{
+    position: relative;
+    top: 200px;
+    width: 100vw;
+}
+
+#VolTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.UpdVol{
+    position: absolute;
+    height: 270px;
+    width: 1200px;
+    top: 23px; 
+    background: linear-gradient(135deg, #1e3c72, #2a5298);  
+    z-index: 1004;
+    border-radius: 20px;
+    left: 300px;
+    display: none;
+}
+
+.delVol{
+    position: absolute;
+    height: 270px;
+    width: 1200px;
+    top: 23px; 
+    background: linear-gradient(135deg, #1e3c72, #2a5298);  
+    z-index: 1004;
+    border-radius: 20px;
+    left: 300px;
+   display: none;
+}

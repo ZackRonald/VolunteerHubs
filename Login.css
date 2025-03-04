@@ -1,0 +1,165 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #FF7F00, #FF4500);
+
+}
+
+/* Outer Container */
+.outerLogin {
+    width: 900px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 127, 0, 0.6); /* Orange glow */
+    top: 130px;
+    left: 320px;
+}
+
+/* Inner Wrapper for Sliding Effect */
+.innerLogin {
+    display: flex;
+    width: 1800px;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Login Sections */
+.staffLogin, .volLogin {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Left Side (Image) */
+.leftStaff, .rightVol {
+    width: 50%;
+    background: rgba(255, 127, 0, 0.15); /* Light Orange Background */
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 127, 0, 0.3);
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+/* Background Images */
+.leftVol {
+    width: 70%;
+    height: 450px;
+    background-image: url('./volunteer.jpg');
+    background-size: 550px 450px;
+    background-repeat: no-repeat;
+}
+.rightStaff {
+    width: 70%;
+    height: 450px;
+    background-image: url('https://sunsw.org.au/wp-content/uploads/2024/05/A7R09816.jpg');
+    background-size: 550px 450px;
+    background-repeat: no-repeat;
+}
+
+/* Headings */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FF7F00;
+    text-shadow: 0 0 15px rgba(255, 127, 0, 0.8);
+}
+
+h3, h2 {
+    font-size: 18px;
+    color: white;
+    opacity: 0.9;
+}
+
+/* Input Fields */
+#staffPass, #staffID, #volPass, #volID {
+    width: 85%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 127, 0, 0.2);
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 12px rgba(255, 127, 0, 0.6);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons */
+button {
+    padding: 12px 25px;
+    margin-top: 15px;
+    border: none;
+    background: linear-gradient(90deg, #FF7F00, #FFA500);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255, 127, 0, 0.8);
+}
+
+button:hover {
+    box-shadow: 0 0 25px rgba(255, 127, 0, 1);
+    transform: scale(1.05);
+}
+
+/* Transition Text */
+.transfer, .cont2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Fixing Sliding Issue */
+.staff-active .inner {
+    transform: translateX(-50%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h3, h2, p, input, button {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Fixes */
+@media (max-width: 480px) {
+   .outerLogin {
+        height: 530px;
+        width: 460px;
+        position: relative;
+        left: 20px;
+        top: 180px;
+   }
+
+   .leftStaff, .rightVol {
+        height: 530px;
+   }
+
+   .leftVol, .rightStaff {
+        display: none;
+   }
+}
